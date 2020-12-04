@@ -9,7 +9,7 @@ public class CheckValidAccountTest {
         boolean expectedResult = true;
         String validAccountID = "123456789";
 
-        Agent agent = new Agent();
+        Agent agent = new Agent(new StubBank());
 
         boolean actualResult = agent.isValidAccount(validAccountID);
 
@@ -21,7 +21,7 @@ public class CheckValidAccountTest {
         boolean expectedResult = false;
         String suspendedAccountID = "234567891";
 
-        Agent agent = new Agent();
+        Agent agent = new Agent(new StubBank());
 
         boolean actualResult = agent.isValidAccount(suspendedAccountID);
 
